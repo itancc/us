@@ -8,6 +8,13 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.glsl$/,
+      use: "raw-loader",
+    });
+    return config;
+  },
   experimental: {
     turbo: {
       rules: {
