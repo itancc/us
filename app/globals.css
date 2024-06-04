@@ -9,13 +9,21 @@
   }
 }
 @layer components {
+  /* 绝对居中 */
   .absolute-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  /* 除去Header的内容高度 */
   .main-h {
     height: calc(100vh - var(--header-height));
+  }
+  /** flex布局横向全居中 */
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
