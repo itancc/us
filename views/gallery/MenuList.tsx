@@ -6,6 +6,7 @@ export default function MenuList() {
   return (
     <div className="p-6 w-[400px] h-full overflow-auto">
       <Input
+        variant="bordered"
         label="Search"
         isClearable
         radius="lg"

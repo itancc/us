@@ -2,10 +2,10 @@
 
 import { Effect, PostProcess } from "@babylonjs/core";
 import GreetFragShader from "./greet.frag.glsl";
-import Scene, { sceneProps } from "@/components/Scene";
+import Scene, { SceneProps } from "@/components/Scene";
 
-export default function GreetScene(props: Omit<sceneProps, "onReady">) {
-  const onReady: sceneProps["onReady"] = ({ scene, camera }) => {
+export default function GreetScene(props: Omit<SceneProps, "onReady">) {
+  const onReady: SceneProps["onReady"] = ({ scene, camera }) => {
     Effect.ShadersStore["starFragmentShader"] = GreetFragShader;
     const postProcess = new PostProcess("star post process", "star", {
       uniforms: ["screenSize", "sceneSampler", "u_time"],

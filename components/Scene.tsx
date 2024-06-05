@@ -16,7 +16,7 @@ import {
 } from "@babylonjs/core";
 import { useTheme } from "next-themes";
 
-export interface sceneProps
+export interface SceneProps
   extends DetailedHTMLProps<
     CanvasHTMLAttributes<HTMLCanvasElement>,
     HTMLCanvasElement
@@ -27,7 +27,7 @@ export interface sceneProps
     camera: Camera;
   }) => void;
 }
-export default function Scene(props: sceneProps) {
+export default function Scene(props: SceneProps) {
   const { onReady, ...rest } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [scene, setScene] = useState<BabylonScene>();
@@ -41,6 +41,7 @@ export default function Scene(props: sceneProps) {
     camera.attachControl(canvas, true);
     setScene(_scene);
     onReady?.({ engine, scene: _scene, camera });
+    window.addEventListener("resize", () => engine.resize());
     engine.runRenderLoop(() => _scene.render());
   }, [onReady]);
 
