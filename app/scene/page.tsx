@@ -1,5 +1,4 @@
 import Piece from "@/components/Piece";
-import Scene from "@/components/Scene";
 import DemoScene from "@/views/scene/DemoScene";
 
 export default function ScenePage() {

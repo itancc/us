@@ -6,6 +6,12 @@
   :root {
     /* header有1px的border */
     --header-height: calc(3.5rem + 1px);
+    --vp-home-hero-name-background: -webkit-linear-gradient(
+      120deg,
+      #337696 30%,
+      #6d0fe9
+    );
+    --vp-home-hero-name-color: transparent;
   }
 }
 @layer components {
@@ -25,5 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .logo-clip {
+    background: var(--vp-home-hero-name-background);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: var(--vp-home-hero-name-color);
   }
 }

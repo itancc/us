@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/navbar";
 import Logo from "@/components/Logo";
 import Menu from "./Menu";
 import ThemeSwitch from "./ThemeSwitch";
+import { SITE_NAME } from "@/configs/info";
 
 export default function Header() {
   return (
@@ -21,7 +22,7 @@ export default function Header() {
             href="/"
           >
             <Logo />
-            <p className="font-bold text-inherit ">ACME</p>
+            <p className="font-bold text-inherit ">{SITE_NAME}</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
