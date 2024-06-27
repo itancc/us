@@ -3,7 +3,7 @@ import AboutCard from "./card";
 
 export default function AboutPage() {
   return (
-    <Piece>
+    <Piece className="max-w-[1200px] ml-auto mr-auto">
       <div className="w-full h-full p-8 flex flex-col items-center justify-center">
         <h2 className="text-3xl font-bold">ABOUT US</h2>
         <div className="flex p-8 items-center gap-12">

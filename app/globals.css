@@ -38,4 +38,18 @@
     background-clip: text;
     -webkit-text-fill-color: var(--vp-home-hero-name-color);
   }
+  .foursquare {
+    width: 40%;
+    height: 60%;
+
+    background: linear-gradient(to left, #888, #888) left top no-repeat,
+      linear-gradient(to bottom, #888, #888) left top no-repeat,
+      linear-gradient(to left, #888, #888) right top no-repeat,
+      linear-gradient(to bottom, #888, #888) right top no-repeat,
+      linear-gradient(to left, #888, #888) left bottom no-repeat,
+      linear-gradient(to bottom, #888, #888) left bottom no-repeat,
+      linear-gradient(to left, #888, #888) right bottom no-repeat,
+      linear-gradient(to left, #888, #888) right bottom no-repeat;
+    background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px;
+  }
 }

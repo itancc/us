@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function GirlIntro() {
   return (
-    <Piece id="boy" className="flex-center py-10 gap-36 px-36">
+    <Piece
+      id="boy"
+      className="flex-center py-10 gap-36   max-w-[1200px] ml-auto mr-auto"
+    >
       <article>
         <h1 className="text-4xl">Yao: Designer & Impasto Fan</h1>
         <p className="mt-6 text-xl">

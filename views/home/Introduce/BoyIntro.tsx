@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function BoyIntro() {
   return (
-    <Piece id="boy" className="flex-center py-10 gap-36 px-36">
+    <Piece
+      id="boy"
+      className="flex-center py-10 gap-36  max-w-[1200px] ml-auto mr-auto"
+    >
       <article>
         <h1 className="text-4xl">
           Itancc: Independent Developer & GIS Engineer
@@ -19,7 +22,7 @@ export default function BoyIntro() {
         src="https://picsum.photos/600/600.webp?random=1"
         alt="Picture of the author"
         width={400}
-        height={600}
+        height={400}
       ></Image>
     </Piece>
   );
