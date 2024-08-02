@@ -3,7 +3,8 @@ import BoyIntro from "@/views/home/Introduce/BoyIntro";
 import GirlIntro from "@/views/home/Introduce/GirlIntro";
 import NewestVlog from "@/views/home/NewestVlog";
 
-export default function Home() {
+export default function Page({ params: { lang } }: any) {
+  console.log(lang, "lang");
   return (
     <>
       <Greet></Greet>
