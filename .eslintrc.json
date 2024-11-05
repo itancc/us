@@ -1,7 +1,7 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     // import时 强制要求import type 类型
-    "@typescript-eslint/consistent-type-imports": "error"
+    // "@typescript-eslint/consistent-type-imports": "error"
   }
 }
