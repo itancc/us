@@ -48,23 +48,23 @@ export default function VideoPlay({ radndom }: { radndom: number }) {
               </div>
             </div>
 
-            <div className="flex w-full items-center justify-center">
+            <div className="flex w-full items-center justify-center gap-2">
               <Button
                 isIconOnly
                 className="data-[hover]:bg-foreground/10"
                 radius="full"
                 variant="light"
               >
-                <ResumeIcon width={28} height={28} />
+                <ResumeIcon width={20} height={20} />
               </Button>
 
               <Button
                 isIconOnly
-                className="w-auto h-auto data-[hover]:bg-foreground/10"
+                className="data-[hover]:bg-foreground/10"
                 radius="full"
                 variant="light"
               >
-                <PauseIcon width={28} height={28} />
+                <PauseIcon width={20} height={20} />
               </Button>
             </div>
           </div>
