@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-export default function AboutCard({ name = "Zoey Doe" }: any) {
+export default function AboutCard({ name = "Zoey Doe" }: { name: string }) {
   return (
     <Card
       className="max-w-[340px]"
