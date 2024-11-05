@@ -3,9 +3,8 @@ name: Deploy on Tag
 on:
   push:
     tags:
-      - 'v*.*.*'  # 匹配版本号格式的 tag
-    branches:
-      - 'main'    # 仅在 main 分支上触发
+      - "v*.*.*" # 匹配版本号格式的 tag
+    if: startsWith(github.ref, 'refs/tags/')
 
 jobs:
   deploy:
@@ -13,6 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Run my command
+        run: |
+          echo "hello world" 
+          echo "${{ github.ref }}"
 
       - name: Trigger Vercel Deploy
         uses: amondnet/vercel-action@v25
