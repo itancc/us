@@ -1,0 +1,25 @@
+name: Deploy on Tag
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # 匹配版本号格式的 tag
+    branches:
+      - 'main'    # 仅在 main 分支上触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Trigger Vercel Deploy
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: .
+          scope: ${{ secrets.VERCEL_ORG_ID }}
