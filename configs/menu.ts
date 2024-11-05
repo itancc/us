@@ -1,7 +1,6 @@
 export const menuItems = [
-  { label: "GALLERY", href: "/gallery" },
+  { label: "画廊", href: "/gallery" },
   { label: "VLOG", href: "/vlog" },
-  { label: "SCENE", href: "/scene" },
-  { label: "BLOG", href: "/blog" },
-  { label: "ABOUT", href: "/about" },
+  { label: "博客", href: "/blog" },
+  { label: "我们", href: "/about" },
 ];

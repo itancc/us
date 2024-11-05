@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
-import robotsMetadata from "@/configs/robotsMetadata";
+
+const robotsMetadata = {
+  siteUrl: "https://nosgr8.top",
+};
 
 export default function robots(): MetadataRoute.Robots {
   const { siteUrl } = robotsMetadata;

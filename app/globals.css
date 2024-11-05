@@ -53,3 +53,14 @@
     background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px;
   }
 }
+
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
