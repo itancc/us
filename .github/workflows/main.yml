@@ -13,11 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run my command
-        run: |
-          echo "hello world" 
-          echo "${{ github.ref }}"
-
       - name: Trigger Vercel Deploy
         uses: amondnet/vercel-action@v25
         with:
@@ -27,3 +22,9 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: .
           scope: ${{ secrets.VERCEL_ORG_ID }}
+          alias-domains: |
+            website-{{PR_NUMBER}}-itanccs-projects.vercel.app
+            nosgr8.top
+            website-itancc.vercel.app
+
+
