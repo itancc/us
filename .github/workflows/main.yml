@@ -23,7 +23,6 @@ jobs:
           working-directory: .
           scope: ${{ secrets.VERCEL_ORG_ID }}
           alias-domains: |
-            website-{{PR_NUMBER}}-itanccs-projects.vercel.app
             nosgr8.top
             website-itancc.vercel.app
 
